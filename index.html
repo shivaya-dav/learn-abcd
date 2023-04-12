@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Virtual Keyboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		/* Style the virtual keyboard buttons */
+		button {
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			margin: 5px;
+			border: none;
+			border-radius: 5px;
+			background-color: #ddd;
+			color: #333;
+			cursor: pointer;
+		}
+		/* Style the input field */
+		input {
+			width: 90%;
+			height: 50px;
+			font-size: 20px;
+			padding: 10px;
+			margin: 5px;
+			border: none;
+			border-radius: 5px;
+			background-color: #eee;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<!-- Create an input field for the virtual keyboard -->
+	<input type="text" id="inputField">
+
+	<!-- Create the virtual keyboard buttons -->
+	<div>
+		<button onclick="addToInput('1')">1</button>
+		<button onclick="addToInput('2')">2</button>
+		<button onclick="addToInput('3')">3</button>
+		<button onclick="addToInput('4')">4</button>
+		<button onclick="addToInput('5')">5</button>
+		<button onclick="addToInput('6')">6</button>
+		<button onclick="addToInput('7')">7</button>
+		<button onclick="addToInput('8')">8</button>
+		<button onclick="addToInput('9')">9</button>
+		<button onclick="addToInput('0')">0</button>
+		<button onclick="addToInput('-')">-</button>
+		<button onclick="addToInput('=')">=</button>
+		<br>
+		<button onclick="addToInput('q')">q</button>
+		<button onclick="addToInput('w')">w</button>
+		<button onclick="addToInput('e')">e</button>
+		<button onclick="addToInput('r')">r</button>
+		<button onclick="addToInput('t')">t</button>
+		<button onclick="addToInput('y')">y</button>
+		<button onclick="addToInput('u')">u</button>
+		<button onclick="addToInput('i')">i</button>
+		<button onclick="addToInput('o')">o</button>
+		<button onclick="addToInput('p')">p</button>
+		<button onclick="addToInput('[')">[</button>
+		<button onclick="addToInput(']')">]</button>
+		<br>
+		<button onclick="addToInput('a')">a</button>
+		<button onclick="addToInput('s')">s</button>
+		<button onclick="addToInput('d')">d</button>
+		<button onclick="addToInput('f')">f</button>
+		<button onclick="addToInput('g')">g</button>
+		<button onclick="addToInput('h')">h</button>
+		<button onclick="addToInput('j')">j</button>
+		<button onclick="addToInput('k')">k</button>
+		<button onclick="addToInput('l')">l</button>
+		<button onclick="addToInput(';')">;</button>
+		<button onclick="addToInput('\'')">\'</button>
+		<br>
+		<button onclick="addToInput('z')">z
+			<button onclick="addToInput('x')">x</button>
+	<button onclick="addToInput('c')">c</button>
+	<button onclick="addToInput('v')">v</button>
+	<button onclick="addToInput('b')">b</button>
+	<button onclick="addToInput('n')">n</button>
+	<button onclick="addToInput('m')">m</button>
+	<button onclick="addToInput(',')">,</button>
+	<button onclick="addToInput('.')">.</button>
+	<button onclick="addToInput('/')">/</button>
+	<button onclick="backspace()">⌫</button>
+	<button onclick="clearInput()">Clear</button>
+</div>
+
+<script>
+	// Get the input field
+	var inputField = document.getElementById("inputField");
+
+	// Function to add characters to the input field
+	function addToInput(character) {
+		inputField.value += character;
+	}
+
+	// Function to delete the last character in the input field
+	function backspace() {
+		inputField.value = inputField.value.slice(0, -1);
+	}
+
+	// Function to clear the input field
+	function clearInput() {
+		inputField.value = "";
+	}
+</script>
+
+
+<script>
+    const A = new Audio("A.wav");
+    const B = new Audio("B.wav");
+	    const C = new Audio("C.wav");
+    const D = new Audio("D.wav");
+	    const E = new Audio("E.wav");
+    const F = new Audio("F.wav");
+	    const G = new Audio("G.wav");
+    const H = new Audio("H.wav");
+	    const I = new Audio("I.wav");
+    const J = new Audio("J.wav");
+	    const K = new Audio("K.wav");
+    const L = new Audio("L.wav");
+	    const M = new Audio("M.wav");
+    const N = new Audio("N.wav");
+	    const O = new Audio("O.wav");
+    const P = new Audio("P.wav");
+	    const Q = new Audio("Q.wav");
+    const R = new Audio("R.wav");
+	    const S = new Audio("S.wav");
+    const T = new Audio("T.wav");
+	    const U = new Audio("U.wav");
+    const V = new Audio("V.wav");
+	    const W = new Audio("W.wav");
+    const X = new Audio("X.wav");
+	    const Y = new Audio("Y.wav");
+    const Z = new Audio("Z.wav");
+    
+    const keySoundMap = {
+      "a": A,
+      "b": B,
+      "c": C,
+      "d": D,
+      "e": E,
+      "f": F,
+	  "g": G,
+      "h": H,
+      "i": I,
+      "j": J,
+      "k": K,
+      "l": L,
+	  "m": M,
+      "n": N,
+      "o": O,
+      "p": P,
+      "q": Q,
+      "r": R,
+	  "s": S,
+      "t": T,
+      "u": U,
+      "v": V,
+      "w": W,
+      "x": X,
+	  "y": Y,
+      "z": Z,
+    };
+    
+    document.addEventListener("keydown", event => {
+      const sound = keySoundMap[event.key];
+      if (sound) {
+
+        sound.currentTime = 0;
+        sound.play();
+      }
+    });
+  </script>
+
+<button id="virtual-keyboard-btn">Show Virtual Keyboard</button>
+
+    <script>
+	// get the button element by its id
+const virtualKeyboardBtn = document.getElementById("virtual-keyboard-btn");
+
+// add a click event listener to the button
+virtualKeyboardBtn.addEventListener("click", function() {
+  // create a virtual keyboard element
+  const virtualKeyboard = document.createElement("div");
+  virtualKeyboard.classList.add("virtual-keyboard");
+  // add any necessary styling to the virtual keyboard element
+  virtualKeyboard.style.position = "absolute";
+  virtualKeyboard.style.bottom = "0";
+  virtualKeyboard.style.left = "0";
+  virtualKeyboard.style.width = "100%";
+  virtualKeyboard.style.height = "200px";
+  virtualKeyboard.style.backgroundColor = "#eee";
+  virtualKeyboard.style.borderTop = "1px solid #ccc";
+  
+  // append the virtual keyboard element to the body of the document
+  document.body.appendChild(virtualKeyboard);
+});
+</script>
+
+
+		<div class="track-list">
+			<ul>
+				<li><a href="#">Track 1</a></li>
+				<li><a href="#">Track 2</a></li>
+				<li><a href="#">Track 3</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
