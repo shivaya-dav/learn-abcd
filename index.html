@@ -14,6 +14,7 @@
         <meta property="og:image:width" content="1280"/>
         <meta property="og:image:height" content="800"/>
         <link href="https://fonts.googleapis.com/css?display=swap&family=Lexend+Deca:600,600italic%7CInter:300,300italic" rel="stylesheet" type="text/css"/>
+        
         <style>
             html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
                 margin: 0;
@@ -972,6 +973,7 @@
                 }
             }
         </style>
+      
         <noscript>
             <style>
                 body {
@@ -1102,6 +1104,117 @@
       }
     });
   </script>
+                      <!--  -->
+                      <style>
+                        #keyboard {
+                          display: flex;
+                          flex-wrap: wrap;
+                          justify-content: center;
+                          align-items: center;
+                          width: 100%;
+                          max-width: 500px;
+                          margin: 0 auto;
+                          border: 1px solid #ccc;
+                          border-radius: 5px;
+                          padding: 10px;
+                        }
+                    
+                        .key {
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          width: 50px;
+                          height: 50px;
+                          background-color: #f5f5f5;
+                          border: 1px solid #ccc;
+                          border-radius: 5px;
+                          margin: 5px;
+                          cursor: pointer;
+                        }
+                      </style>
+                    </head>
+                 
+                      <div id="keyboard">
+                        <div class="key" data-key="65">A</div>
+                        <div class="key" data-key="66">B</div>
+                        <div class="key" data-key="67">C</div>
+                        <div class="key" data-key="68">D</div>
+                        <div class="key" data-key="69">E</div>
+                        <div class="key" data-key="70">F</div>
+                        <div class="key" data-key="71">G</div>
+                        <div class="key" data-key="72">H</div>
+                        <div class="key" data-key="73">I</div>
+                        <div class="key" data-key="74">J</div>
+                        <div class="key" data-key="75">K</div>
+                        <div class="key" data-key="76">L</div>
+                        <div class="key" data-key="77">M</div>
+                        <div class="key" data-key="78">N</div>
+                        <div class="key" data-key="79">O</div>
+                        <div class="key" data-key="80">P</div>
+                        <div class="key" data-key="81">Q</div>
+                        <div class="key" data-key="82">R</div>
+                        <div class="key" data-key="83">S</div>
+                        <div class="key" data-key="84">T</div>
+                        <div class="key" data-key="85">U</div>
+                        <div class="key" data-key="86">V</div>
+                        <div class="key" data-key="87">W</div>
+                        <div class="key" data-key="88">X</div>
+                        <div class="key" data-key="89">Y</div>
+                        <div class="key" data-key="90">Z</div>
+                      </div>
+                      <audio id="audio-I" src="I.wav"></audio>
+                      <audio id="audio-J" src="J.wav"></audio>
+                      <audio id="audio-K" src="K.wav"></audio>
+                      <audio id="audio-L" src="L.wav"></audio>
+                      <audio id="audio-M" src="M.wav"></audio>
+                      <audio id="audio-N" src="N.wav"></audio>
+                      <audio id="audio-O" src="O.wav"></audio>
+                      <audio id="audio-P" src="P.wav"></audio>
+                      <audio id="audio-Q" src="Q.wav"></audio>
+                      <audio id="audio-R" src="R.wav"></audio>
+                      <audio id="audio-S" src="S.wav"></audio>
+                      <audio id="audio-T" src="T.wav"></audio>
+                      <audio id="audio-U" src="U.wav"></audio>
+                      <audio id="audio-V" src="V.wav"></audio>
+                      <audio id="audio-W" src="W.wav"></audio>
+                      <audio id="audio-X" src="X.wav"></audio>
+                      <audio id="audio-Y" src="Y.wav"></audio>
+                      <audio id="audio-Z" src="Z.wav"></audio>
+                
+                      <audio id="audio-A" src="A.wav"></audio>
+                      <audio id="audio-B" src="B.wav"></audio>
+                      <audio id="audio-C" src="C.wav"></audio>
+                      <audio id="audio-D" src="D.wav"></audio>
+                      <audio id="audio-E" src="E.wav"></audio>
+                      <audio id="audio-F" src="F.wav"></audio>
+                      <audio id="audio-G" src="G.wav"></audio>
+                      <audio id="audio-H" src="H.wav"><script>
+                        
+                    
+                      const keys = document.querySelectorAll('.key');
+                        
+                        function playAudio(audio) {
+                          audio.currentTime = 0;
+                          audio.play();
+                        }
+                      
+                        keys.forEach(key => {
+                          key.addEventListener('click', () => {
+                            const audio = document.querySelector(`#audio-${key.innerText}`);
+                            playAudio(audio);
+                          });
+                        });
+                      
+                        document.addEventListener('keydown', event => {
+                          const audio = document.querySelector(`#audio-${event.key.toUpperCase()}`);
+                          if (audio) {
+                            playAudio(audio);
+                          }
+                        });
+                      </script>
+                
+                    <!--  -->
+
                     <div id="gallery02" class="style1 gallery full screen">
                         <div class="inner">
                             <ul>
@@ -1144,6 +1257,7 @@
                 </div>
             </div>
         </div>
+
         <script>
             (function() {
                 var on = addEventListener
@@ -1959,5 +2073,6 @@
             }
             )();
         </script>
+
     </body>
 </html>
