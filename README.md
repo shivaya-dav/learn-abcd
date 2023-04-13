@@ -4,6 +4,6 @@ https://cybershieldx.com/abcd/
 
 ## Contributors
 
-- [John Doe](https://github.com/sshivakumarr)
-- [Jane Smith](https://github.com/shivaya-dav)
+- [shiva prajapat](https://github.com/sshivakumarr)
+- [shiva yadav](https://github.com/shivaya-dav)
 
