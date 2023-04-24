@@ -4,6 +4,6 @@ https://cybershieldx.com/abcd/
 
 ## Contributors
 
-- [shiva prajapat](https://github.com/sshivakumarr)
+- [shiva prajapat](https://github.com/shiva-coding)
 - [shiva yadav](https://github.com/shivaya-dav)
 
